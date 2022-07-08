@@ -1,0 +1,52 @@
+.TodoList {
+  background: white;
+  width: 512px;
+  box-shadow: 0 3px 9px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); /* 그림자 */ 
+  margin: auto; 
+  margin-top: 4rem;
+}
+
+.TodoList .title {
+  padding: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 500;
+  background: orange;
+  color: black;
+}
+
+.TodoList .BottomLink {
+  padding: 0.7em;
+  font-size: 1em;
+  text-align: center;
+  color: black;
+}
+
+.TodoList .btn {
+  display: inline-block;
+  color: #000;
+  background: #ffa351;
+  border: none;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.TodoList .btn:hover,
+.TodoList .btn:active {
+  display: inline-block;
+  color: #000;
+  background: #dfa068;
+  border: none;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: inherit;
+}
