@@ -1,5 +1,5 @@
-import React, { useState, useEffect, Component } from 'react';
-import {connect} from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import Todo from '../../components/Todo/Todo';
 import TodoDetail from '../../components/TodoDetail/TodoDetail';
 import WithRouter from '../../routerCode/withRouterSample';
@@ -28,7 +28,7 @@ const TodoList = (props) => {
     selectedTodo: null,
   }
 
-  const [state, setState] = useState(defaultState);
+  const [state] = useState(defaultState);
 
   const todos = props.storedTodos.map((td) => {
     return (
@@ -57,14 +57,14 @@ const TodoList = (props) => {
     <div className="TodoList">
       <div className="title">{props.title}</div>
       <div>
-        {todos.length > 0 ? 
+        {todos.length > 0 ?
           <div className="todos">{todos}</div> : <h3>No TODOs</h3>}
       </div>
       {todo}
       <div className="BottomLink">
         <NavLink to='/new-todo' exact>
-            <button className="btn">
-                New Todo
+          <button className="btn">
+            New Todo
             </button>
         </NavLink>
       </div>
@@ -74,11 +74,11 @@ const TodoList = (props) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onToggleTodo: (id) =>  
+    onToggleTodo: (id) =>
       dispatch(actionCreators.toggleTodo(id)),
-    onDeleteTodo: (id) => 
+    onDeleteTodo: (id) =>
       dispatch(actionCreators.deleteTodo(id)),
-    onGetAll: () => 
+    onGetAll: () =>
       dispatch(actionCreators.getTodos())
   };
 }

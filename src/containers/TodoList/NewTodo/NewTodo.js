@@ -1,5 +1,5 @@
-import React, { useState, Component } from 'react';
-import {connect} from 'react-redux';
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 import './NewTodo.css';
 import * as actionCreators from '../../../store/actions/index';
@@ -25,7 +25,7 @@ const NewTodo = (props) => {
       <h1>Add a Todo</h1>
       <label>Title</label>
       <input type="text" value={title}
-        onChange={(event) => setTitle(event.target.value )} />
+        onChange={(event) => setTitle(event.target.value)} />
       <br></br>
       <label>Content</label>
       <textarea rows="4" type="text" value={content}
@@ -37,8 +37,8 @@ const NewTodo = (props) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onStoreTodo: (title, content) => 
-      dispatch(actionCreators.postTodo({title: title, content: content}))
+    onStoreTodo: (title, content) =>
+      dispatch(actionCreators.postTodo({ title: title, content: content }))
   };
 };
 
